@@ -1,0 +1,23 @@
+{% load static %}
+
+{% block style %} <link rel="stylesheet" type="text/css" href="{% static 'style/navbar.css' %}" /> {% endblock %}
+
+<div class="navbar">
+
+    <!-- Changer urls -->
+    <a href="{% url 'home' %}"> 
+        <img src="{% static 'assets/navbar/home_vector.svg' %}" alt="">
+    </a>
+
+    <a href="{% url 'home' %}"> 
+        <img src="{% static 'assets/navbar/stat_vector.svg' %}" alt="">
+    </a>
+
+    <a href="{% url 'home' %}"> 
+        <img src="{% static 'assets/navbar/bell_vector.svg' %}" alt="">
+    </a>
+
+    <a href="{% url 'home' %}"> 
+        <img src="{% static 'assets/navbar/setting_vector.svg' %}" alt="">
+    </a>   
+</div>

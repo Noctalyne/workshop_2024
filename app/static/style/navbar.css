@@ -1,0 +1,10 @@
+.navbar {
+    width: 100%;
+    background-color: #FFFFFF;
+
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+    position: sticky;
+    bottom: 0px;
+}

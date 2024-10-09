@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/tutorial.css' %}" /> {% endblock %}
+
+{% block title %} Accueil {% endblock %}
+
+
+
+{% block content %}
+<div class="container tuto_step">
+    <img src="{% static 'assets/tutorial/caretaking.svg' %}" alt="">
+    <h1>Assistance médicale rapide</h1>
+    <p>
+        En cas de besoin, CircleCare alerte instantanément les services médicaux avec votre position géolocalisée.
+        Une intervention rapide est essentielle pour protéger votre santé.
+    </p>
+    <div class="tuto_step_footer">
+        <a href="{% url 'home' %}"> Passer le tutoriel</a>
+        <a href="{% url 'tutoStepThree' %}">Suivant</a>
+    </div>
+</div>
+{% endblock %}

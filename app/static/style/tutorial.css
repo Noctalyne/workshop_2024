@@ -1,0 +1,17 @@
+.tuto_step {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.tuto_step_footer {
+    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+}
+
+.tuto_step_footer a {
+    color: var(--primary) !important;
+}

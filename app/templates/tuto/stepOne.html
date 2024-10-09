@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %} <link rel="stylesheet" type="text/css" href="{% static 'style/tutorial.css' %}" /> {% endblock %}
+
+{% block title %} Accueil {% endblock %}
+
+
+
+{% block content %}
+
+<div class="container tuto_step">
+
+    <img src="{% static 'assets/tutorial/using_computer.svg' %}" alt="">
+
+    <h1>Suivi précis de vos signes vitaux</h1>
+    <p>
+        Avec CircleCare, restez informé en continu de vos paramètres vitaux.
+        Nos capteurs intelligents vous alertent dès qu’un changement est détecté.
+    </p>
+
+    <div class="tuto_step_footer">
+    <a href="{% url 'home' %}"> Passer le tutoriel</a>
+    <a href="{% url 'tutoStepTwo' %}">Suivant</a>
+    </div>
+</div>
+{% endblock %}
