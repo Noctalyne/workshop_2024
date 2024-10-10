@@ -81,14 +81,6 @@ Pour installer et lancer l'application avec Docker, exécutez la commande suivan
     docker-compose up
 ```
 
-**Optionnel**
-
-Pour créer un utilisateur admin lorsque l'appli tourne via Docker exécutez la commande suivante et suivez les instructions :
-
-```bash
-docker exec -it circle-care python manage.py createsuperuser
-```
-
 ## **Structure du projet**
 
 ```
@@ -103,4 +95,19 @@ docker exec -it circle-care python manage.py createsuperuser
 
 ## **Utilisation**
 
-Une fois l'application lancée, accédez à l'interface web à l'adresse ```http://localhost:8000.``` Vous pouvez y créer un compte pour un proche ou un médecin, voir les données de santé en temps réel et configurer les notifications d'alerte.
+Une fois l'application lancée, accédez à l'interface web à l'adresse ```http://localhost:8000```.
+Le panneau administrateur est disponible via cette url ```http://localhost:8000/admin```.
+Vous devrez créer un utilisateur admin pour vous y connecter via la commande suivante :
+
+**Pour une installation manuelle**
+```bash
+python manage.py createsuperuser
+```
+
+**Pour une installation via Docker**
+
+```bash
+docker exec -it circle-care python manage.py createsuperuser
+```
+
+Vous pouvez y créer un compte pour un proche ou un médecin, voir les données de santé en temps réel et configurer les notifications d'alerte.
