@@ -124,7 +124,7 @@ if __name__ == "__main__":
 """## 3- Enregistrer les anomalies dans un fichier excel"""
 
 # Function to save anomalies from the SQLite database to an Excel file
-def save_anomalies_to_excel(db_name='blood_pressure_anomalies.db', excel_file='anomalies.xlsx'):
+def save_anomalies_to_excel(db_name='db.sqlite3', excel_file='anomalies.xlsx'):
     # Connect to the SQLite database
     conn = sqlite3.connect(db_name)
 
@@ -168,7 +168,7 @@ if __name__ == "__main__":
     print(anomalies)
 
     # Save anomalies DataFrame to SQLite (for the purpose of this example, we save it into a new DB)
-    conn = sqlite3.connect('blood_pressure_anomalies.db')
+    conn = sqlite3.connect('db.sqlite3')
     anomalies.to_sql('anomalies', conn, if_exists='replace', index=False)
     conn.close()
 
