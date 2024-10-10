@@ -44,6 +44,16 @@ def findWatch(request) :
 def underWork(request) :
     return render(request, 'components/workInProgress.html')
 
+def settings(request) :
+    return render(request, 'settings.html')
+
+def notifications(request) :
+    return render(request, 'settingsFolder/notifications.html')
+
+def apparence(request) :
+    return render(request, 'settingsFolder/apparence.html')
+
+
 # from django.http import HttpResponse
 #
 #

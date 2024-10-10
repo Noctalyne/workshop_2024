@@ -1,0 +1,107 @@
+@import url('style.css');
+
+/* Settings Page Styles */
+.settings-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #F06D5F; /* Primary color matching the image */
+}
+
+.settings-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user-profile {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid var(--seventh); /* Reusing variable for consistency */
+}
+
+.profile-info {
+    margin-top: 10px;
+}
+
+.edit-profile {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid var(--seventh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-profile img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Menu Section */
+.settings-menu {
+    margin-top: 20px;
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #F06D5F;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.settings-item:hover {
+    background-color: #F9E5E3; /* Light hover effect */
+}
+
+.settings-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.settings-item span {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.settings-item img:last-child {
+    margin-left: auto;
+    width: 16px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .settings-page {
+        padding: 10px;
+    }
+
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .settings-item {
+        padding: 10px;
+    }
+
+    .settings-item span {
+        font-size: 14px;
+    }
+}

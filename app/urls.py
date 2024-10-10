@@ -16,6 +16,9 @@ urlpatterns = [
     path('home/account/laboratoryResult/', views.laboratoryResult, name='laboratoryResult'),
     path('home/account/advice/', views.advice, name='advice'),
     path('home/account/findWatch/', views.findWatch, name='findWatch'),
+    path('home/settings/', views.settings, name='settings'),
+    path('home/settings/notifications/', views.notifications, name='notifications'),
+    path('home/settings/apparence/', views.apparence, name='apparence'),
 
     path('home/none', views.underWork, name="underWork"),
 

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- CSS for this page -->
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/settings/apparence.css' %}" />
+{% endblock %}
+
+{% block title %} Apparence {% endblock %}
+
+{% block content %}
+<div class="appearance-page">
+    <div class="appearance-header">
+        <h1>Apparence</h1>
+    </div>
+
+    <div class="appearance-menu">
+
+        <div class="appearance-item">
+            <div class="appearance-content">
+                <h3>Apparence classique</h3>
+                <p>Apparence classique de l'application</p>
+            </div>
+        </div>
+
+        <div class="appearance-item">
+            <div class="appearance-content">
+                <h3>Protanopie</h3>
+                <p>Apparence pour les personnes atteinte de daltonisme rouge/vert "faiblesse rouge"</p>
+            </div>
+        </div>
+
+        <div class="appearance-item">
+            <div class="appearance-content">
+                <h3>Deutéranopie</h3>
+                <p>Apparence pour les personnes atteinte de daltonisme rouge/vert "faiblesse vert"</p>
+            </div>
+        </div>
+
+        <div class="appearance-item">
+            <div class="appearance-content">
+                <h3>Tritanopie</h3>
+                <p>Apparence pour les personnes atteinte de daltonisme bleu/jaune</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% include "components/navbar.html" %}
+{% endblock %}
