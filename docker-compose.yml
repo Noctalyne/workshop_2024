@@ -1,6 +1,7 @@
 services:
   web:
     build: .
+    container_name: circle-care
     command: bash -c "python manage.py migrate && python manage.py loaddata fixtures.json && python bracelet_simulation.py && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/app
@@ -8,3 +9,9 @@ services:
       - "8000:8000"
     env_file:
       - .env.example
+    networks:
+      - circle-care
+
+networks:
+  circle-care:
+    driver: bridge

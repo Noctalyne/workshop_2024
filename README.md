@@ -81,6 +81,14 @@ Pour installer et lancer l'application avec Docker, exécutez la commande suivan
     docker-compose up
 ```
 
+**Optionnel**
+
+Pour créer un utilisateur admin lorsque l'appli tourne via Docker exécutez la commande suivante et suivez les instructions :
+
+```bash
+docker exec -it circle-care python manage.py createsuperuser
+```
+
 ## **Structure du projet**
 
 ```
