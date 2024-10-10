@@ -5,6 +5,10 @@
     align-items: center !important;
 }
 
+.tuto_step img {
+    width: 25% !important;
+}
+
 .tuto_step_footer {
     width: 100%;
     display: flex !important;

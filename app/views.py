@@ -41,6 +41,9 @@ def advice(request) :
 def findWatch(request) :
     return render(request, 'account/findWatch.html')
 
+def underWork(request) :
+    return render(request, 'components/workInProgress.html')
+
 # from django.http import HttpResponse
 #
 #

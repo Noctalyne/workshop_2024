@@ -17,4 +17,6 @@ urlpatterns = [
     path('home/account/advice/', views.advice, name='advice'),
     path('home/account/findWatch/', views.findWatch, name='findWatch'),
 
+    path('home/none', views.underWork, name="underWork"),
+
 ]

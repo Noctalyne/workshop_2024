@@ -27,18 +27,18 @@
                 placeholder="Password" autocomplete="off">
             <label for="floatingPassword">Mot de passe</label>
         </div>
-        <div id="passwordHelp" class="form-text text-end">Mot de passe oublié ?</div>
 
         <button class="btn_full">
-            <a href="{% url 'tutoStepOne' %}">Connexion</a>
+            <a href="{% url 'tutoStepOne' %}">Inscription</a>
         </button>
 
-        <div class="d-flex flex-row">
-            <p>Déjà un compte ?</p>
-            <a href="{% url 'register' %}"> Connexion</a>
-        </div>
-
     </div>
+    
+    <div class="change_log_method">
+        <p>Déjà un compte ?</p>
+        <a href="{% url 'register' %}"> Connexion</a>
+    </div>
+
     <!-- </form> -->
 </div>
 
