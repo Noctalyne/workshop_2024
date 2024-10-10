@@ -6,13 +6,9 @@
     --fifth: #fef3ef;
     --sixth: #82799D;
     --seventh: #EDECF4;
-
 }
 
-/* Global */
-
-
-
+/* CSS Global */
 .content_body {
     margin-top: 25px !important;
 }
@@ -26,19 +22,24 @@
     max-width: 50%;
 }
 
-h1,h2,h3,h4,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     color: var(--primary) !important;
-    padding: 5px auto;
+    margin: 15px !important;
 }
 
 p {
     color: #82799D !important;
-    margin: 0px 10px !important;
+    margin: 5px 10px !important;
 }
 
 a {
     text-decoration: none !important;
     color: var(--primary) !important;
+    margin: 20px 10px !important;
 }
 
 
@@ -51,12 +52,14 @@ button {
     max-width: 30%;
 }
 
-.btn_full, .btn_full a {
+.btn_full,
+.btn_full a {
     background-color: var(--primary) !important;
     color: #ffffff !important;
 }
 
-.btn_empty, .btn_empty a  {
+.btn_empty,
+.btn_empty a {
     background-color: none !important;
     color: var(--primary) !important;
 }
@@ -85,11 +88,12 @@ button {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center;
+    align-items: center;
 }
 
 
 .logo_under_construct {
     width: 25% !important;
     margin: 10px;
-    
+
 }
