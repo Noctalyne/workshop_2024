@@ -1,0 +1,77 @@
+[
+  {
+    "model": "app.user",
+    "pk": 1,
+    "fields": {
+      "email": "john@example.com",
+      "password": "securepassword123",
+      "first_name": "John",
+      "last_name": "Doe",
+      "birthday": "1990-01-15",
+      "sexe": "Male",
+      "phone": "1234567890",
+      "social_security_number": "123-45-6789",
+      "created_at": "2023-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "app.user",
+    "pk": 2,
+    "fields": {
+      "email": "jane@example.com",
+      "password": "password456",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "birthday": "1985-05-20",
+      "sexe": "Female",
+      "phone": "9876543210",
+      "social_security_number": "987-65-4321",
+      "created_at": "2023-01-02T00:00:00Z"
+    }
+  },
+  {
+    "model": "app.usertutor",
+    "pk": 1,
+    "fields": {
+      "user_id": 1,
+      "tutor_id": 2,
+      "relationship": "Doctor",
+      "start_at": "2023-01-03T00:00:00Z",
+      "end_at": "2024-01-03T00:00:00Z"
+    }
+  },
+  {
+    "model": "app.pathology",
+    "pk": 1,
+    "fields": {
+      "name": "Hypertension",
+      "description": "High blood pressure condition",
+      "category": "Cardiovascular",
+      "start_at": "2023-01-04T00:00:00Z",
+      "end_at": "2024-01-04T00:00:00Z"
+    }
+  },
+  {
+    "model": "app.userpathology",
+    "pk": 1,
+    "fields": {
+      "user_id": 1,
+      "pathology_id": 1,
+      "diagnosis_date": "2023-01-05",
+      "severity": "Moderate",
+      "status": "Active"
+    }
+  },
+  {
+    "model": "app.healthmeasurements",
+    "pk": 1,
+    "fields": {
+      "user_id": 1,
+      "pathology_id": 1,
+      "measurement_type": "Blood Pressure",
+      "measurement_date": "2023-01-06T10:00:00Z",
+      "value": 140.0,
+      "unit": "mmHg"
+    }
+  }
+]
