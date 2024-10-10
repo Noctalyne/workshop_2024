@@ -76,8 +76,8 @@ WSGI_APPLICATION = 'circleCare.wsgi.application'
 
 DATABASES = {
     'default': {
-       'ENGINE': 'djongo',
-       'NAME': 'circleCare',
+       'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
    }
 }
 
