@@ -27,12 +27,13 @@ Le système inclut un suivi médical à travers une API, intégrant des données
 
 1. **Cloner le dépôt**  
 
-   ```bash
+```bash
    git clone https://gitlab.com/votre-depot/bracelet-connecte.git
    cd bracelet-connecte
-    ```
+ ```
 
 2. **Installer les dépendances**
+
 **Utilisez un environnement virtuel Python :** 
 
 ```bash
@@ -64,6 +65,14 @@ Créez un fichier .env en vous basant sur le fichier env.example pour ajouter vo
 
 ```bash
     python bracelet_simulation.py
+```
+
+## **Docker**
+
+Pour lancer l'application avec Docker, exécutez la commande suivante :
+
+```bash
+    docker-compose up
 ```
 
 ## **Structure du projet**
