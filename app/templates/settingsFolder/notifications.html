@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- CSS for this page -->
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/settings/notifications.css' %}" />
+{% endblock %}
+
+{% block title %} Notifications {% endblock %}
+
+{% block content %}
+<div class="notifications-page">
+    <div class="notifications-header">
+        <h1>Notifications</h1>
+    </div>
+
+    <div class="notifications-menu">
+
+        <div class="notification-item">
+            <span class="notification-dot" style="background-color: #9B51E0;"></span>
+            <div class="notification-content">
+                <h3>Notification sonore</h3>
+                <p>Bruit d'alarme en cas de problème détecté. Choisissez le volume sonore adapté à vos besoins.</p>
+            </div>
+        </div>
+
+        <div class="notification-item">
+            <span class="notification-dot" style="background-color: #F2C94C;"></span>
+            <div class="notification-content">
+                <h3>Notification visuel</h3>
+                <p>Lumière SOS activée pour alerter votre entourage. Couleur et intensité de la lumière personnalisables.</p>
+            </div>
+        </div>
+
+        <div class="notification-item">
+            <span class="notification-dot" style="background-color: #2D9CDB;"></span>
+            <div class="notification-content">
+                <h3>Notification physique</h3>
+                <p>Activation de vibrations pour vous alerter. Réglez la puissance des vibrations selon vos préférences.</p>
+            </div>
+        </div>
+
+        <div class="notification-item">
+            <span class="notification-dot" style="background-color: #EB5757;"></span>
+            <div class="notification-content">
+                <h3>Notification pour vos proches</h3>
+                <p>Sélectionnez les notifications à partager avec vos proches.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% include "components/navbar.html" %}
+{% endblock %}

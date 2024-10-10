@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- CSS pour cette page -->
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/settings.css' %}" />
+{% endblock %}
+
+{% block title %} Paramètres {% endblock %}
+
+{% block content %}
+<div class="settings-page">
+    <div class="settings-header">
+        <div class="user-profile">
+            <img class="profile-avatar" src="{% static 'assets/account/account_avatar.svg' %}" alt="Avatar de Gertrude">
+            <div class="profile-info">
+                <h2>Gertrude Dubois</h2>
+                <p>gertrudedubois@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="settings-menu">
+        <a href="#" class="settings-item">
+            <img src="{% static 'assets/settings/Vector.svg' %}" alt="">
+            <span>Paramètres du compte</span>
+        </a>
+
+        <a href="{% url 'notifications' %}" class="settings-item">
+            <img src="{% static 'assets/navbar/bell_vector.svg' %}" alt="">
+            <span>Notification</span>
+        </a>
+
+        <a href="{% url 'apparence' %}" class="settings-item">
+            <img src="{% static 'assets/settings/Eye.svg' %}" alt="">
+            <span>Apparence</span>
+        </a>
+
+        <a href="#" class="settings-item">
+            <img src="{% static 'assets/settings/Security.svg' %}" alt="">
+            <span>Confidentialité du compte</span>
+        </a>
+
+        <a href="#" class="settings-item">
+            <img src="{% static 'assets/settings/Son.svg' %}" alt="">
+            <span>Son</span>
+        </a>
+
+        <a href="#" class="settings-item">
+            <img src="{% static 'assets/settings/Language.svg' %}" alt="">
+            <span>Langue</span>
+        </a>
+    </div>
+</div>
+
+{% include "components/navbar.html" %}
+{% endblock %}

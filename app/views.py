@@ -41,6 +41,16 @@ def advice(request) :
 def findWatch(request) :
     return render(request, 'account/findWatch.html')
 
+def settings(request) :
+    return render(request, 'settings.html')
+
+def notifications(request) :
+    return render(request, 'settingsFolder/notifications.html')
+
+def apparence(request) :
+    return render(request, 'settingsFolder/apparence.html')
+
+
 # from django.http import HttpResponse
 #
 #
