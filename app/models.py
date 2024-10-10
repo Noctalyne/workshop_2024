@@ -8,10 +8,10 @@ class User(models.Model):
     password = models.CharField(max_length=50)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    birthday = models.DateField()
-    sexe = models.CharField(max_length=50)
-    phone = models.CharField(max_length=50)
-    social_security_number = models.CharField(max_length=50)
+    birthday = models.DateField(null=True)
+    sexe = models.CharField(null=True, max_length=50)
+    phone = models.CharField(null=True, max_length=50)
+    social_security_number = models.CharField(null=True, max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
 
 

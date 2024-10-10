@@ -27,6 +27,13 @@
 
 <body>
     <div class="container content_body">
+        {% if messages %}
+            <ul class="messages flex-center">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
         {% block content %}
 
         {% endblock %}

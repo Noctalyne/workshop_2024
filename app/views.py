@@ -1,7 +1,11 @@
 import json
+
+from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from .forms import UserForm
+from .forms import UserForm, LoginForm, RegisterForm
+from .models import User
+from django.contrib.auth.models import User as AuthUser
 import datetime
 
 # Create your views here.
@@ -11,11 +15,52 @@ def landing(request):
 def home(request):
     return render(request, 'home.html')
 
-def connect(request):
-    return render(request, 'connect.html')
+def authentification(request):
+    # user = User.objects.create_user("user", "user@user.fr", "userPassword1234")
+    # user.last_name = "user"
+    # user.save()
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            print(email, password)
+
+            # Utilisation de l'authentification via le modèle utilisateur
+            user = AuthUser.objects.get(email=email)
+            user = authenticate(request, username=user.username, password=password)
+
+            if user is not None:
+                # Authentification réussie, connexion de l'utilisateur
+                login(request, user)
+                messages.success(request, 'Connexion réussie.')
+                return redirect('tutoStepOne')  # Redirection après connexion réussie
+            else:
+                # Authentification échouée, affichage d'un message d'erreur
+                messages.error(request, 'Email ou mot de passe incorrect.')
+    else:
+        form = LoginForm()
+
+    return render(request, 'login.html', {'form': form})
 
 def register(request):
-    return render(request, 'register.html')
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            full_name = form.cleaned_data['full_name']
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            # Ici, tu peux créer un utilisateur ou effectuer d'autres actions
+            user = AuthUser.objects.create_user(full_name, email, password)
+            if user is not None:
+                # Authentification réussie, connexion de l'utilisateur
+                login(request, user)
+                messages.success(request, 'Inscription réussie.')
+                return redirect('tutoStepOne')  # Redirection après inscription réussie
+    else:
+        form = RegisterForm()
+
+    return render(request, 'register.html', {'form': form})
 
 def tutoStepOne(request):
     return render(request, 'tuto/stepOne.html')
