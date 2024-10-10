@@ -33,7 +33,6 @@ def authentification(request):
             if user is not None:
                 # Authentification réussie, connexion de l'utilisateur
                 login(request, user)
-                messages.success(request, 'Connexion réussie.')
                 return redirect('tutoStepOne')  # Redirection après connexion réussie
             else:
                 # Authentification échouée, affichage d'un message d'erreur
