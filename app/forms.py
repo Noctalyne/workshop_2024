@@ -41,3 +41,38 @@ class HealthMeasurementsForm(forms.ModelForm):
         widgets = {
             'measurement_date': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
         }
+
+class LoginForm(forms.Form):
+    email = forms.EmailField(widget=forms.EmailInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'name@example.com',
+        'id': 'floatingInput'
+    }))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Password',
+        'id': 'floatingPassword',
+        'autocomplete': 'off'
+    }))
+
+class RegisterForm(forms.Form):
+    full_name = forms.CharField(
+        label="Nom",
+        max_length=100,
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'id': 'floatingInput',
+            'placeholder': 'Nom'
+        })
+    )
+    email = forms.EmailField(widget=forms.EmailInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'name@example.com',
+        'id': 'floatingInput'
+    }))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Password',
+        'id': 'floatingPassword',
+        'autocomplete': 'off'
+    }))
