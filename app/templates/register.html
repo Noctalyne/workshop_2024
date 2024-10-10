@@ -13,8 +13,8 @@
     <img src="{% static 'assets/Logo_2_nobackground.png' %}" alt="Logo de Circle Care">
 
     <!-- <form> -->
-    <div class="connexion_form">
-        <form method="post">
+    <div>
+        <form class="connexion_form" method="post">
                 {% csrf_token %}
             <div class="form-floating mb-3">
                 {{ form.full_name }}
