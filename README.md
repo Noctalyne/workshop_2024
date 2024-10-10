@@ -53,13 +53,19 @@ Créez un fichier .env en vous basant sur le fichier env.example pour ajouter vo
     python manage.py migrate
 ```
 
-5. **Lancer le serveur de développement**
+5. **Charger les données de test**
+
+```bash
+    python manage.py loaddata fixtures.json
+```
+
+6. **Lancer le serveur de développement**
 
 ```bash
     python manage.py runserver
 ```
 
-6. **Démarrer le bracelet**
+7. **Démarrer le bracelet**
 
 - Pour simuler le fonctionnement du bracelet connecté, un script Python est fourni. Il envoie des données à l'API à partir de capteurs simulés.
 
