@@ -24,7 +24,6 @@ def authentification(request):
         if form.is_valid():
             email = form.cleaned_data['email']
             password = form.cleaned_data['password']
-            print(email, password)
 
             # Utilisation de l'authentification via le modèle utilisateur
             user = AuthUser.objects.get(email=email)
