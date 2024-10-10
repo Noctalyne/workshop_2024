@@ -92,7 +92,6 @@ Pour installer et lancer l'application avec Docker, exécutez la commande suivan
     └── README.md                # Ce fichier
 ```
 
-
 ## **Utilisation**
 
 Une fois l'application lancée, accédez à l'interface web à l'adresse ```http://localhost:8000```.
