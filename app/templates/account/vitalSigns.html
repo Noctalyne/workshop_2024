@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/account.css' %}" /> {% endblock %}
+
+{% block title %}Mes signes vitaux {% endblock %}
+
+
+
+{% block content %}
+
+<div>
+    <h1>Mes signes vitaux</h1>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+
+
+{% include "components/navbar.html" %}
+
+{% endblock %}

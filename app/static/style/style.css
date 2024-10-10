@@ -7,16 +7,27 @@
     --sixth: #82799D;
     --seventh: #EDECF4;
 
-    /* --button: */
+}
+
+/* Global */
+.content_body {
+    margin-top: 25px !important;
+}
+
+h1,h2,h3,h4,h5 {
+    color: var(--primary) !important;
+    padding: 5px auto;
+}
+
+p {
+    color: #82799D !important;
 }
 
 a {
     text-decoration: none !important;
-}
-
-h1,h3,h4,h5 {
     color: var(--primary) !important;
 }
+
 
 button {
     width: 90%;
@@ -25,14 +36,13 @@ button {
     margin-top: 10px !important;
 }
 
-.signUp,
-.signUp a {
+.btn_full, .btn_full a {
     background-color: var(--primary) !important;
     color: #ffffff !important;
 }
 
-.signIn,
-.signIn a {
+.btn_empty, .btn_empty a  {
+    background-color: none !important;
     color: var(--primary) !important;
 }
 
@@ -42,43 +52,3 @@ button {
     justify-content: center;
 }
 
-/* Page HOME */
-
-.home_header {
-    margin-top: 25px;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-evenly !important;
-
-}
-
-.account_avatar {
-    border: 5px solid var(--seventh) !important;
-    border-radius: 50%;
-}
-
-.home_block a {
-    width:100%;
-    display: flex !important;
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
-    /* justify-content: center !important; */
-    align-items: center !important;
-}
-
-.home_block a div {
-    width: 90%;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-evenly !important;
-    background-color: var(--seventh);
-    border: 1px solid var(--seventh);
-    border-radius: 12px;
-    margin: 20px auto;
-}
-
-.home_block a div h5 {
-    width: 45%;
-    align-self: center;
-    text-align: center;
-}

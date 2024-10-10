@@ -4,7 +4,7 @@
 {% block title %} Connexion {% endblock %}
 
 {% block content %}
-<div class="container text-center">
+<div class="text-center">
     <h3>Content de te revoir</h3>
     <h1>Connexion</h1>
 
@@ -13,7 +13,6 @@
     <!-- <form> -->
     <div class="connexion_form">
         <div class="form-floating mb-3">
-
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Email</label>
         </div>
@@ -24,7 +23,7 @@
         </div>
         <div id="passwordHelp" class="form-text text-end">Mot de passe oublié ?</div>
 
-        <button class="signUp">
+        <button class="btn_full">
             <a href="{% url 'tutoStepOne' %}">Connexion</a>
         </button>
 

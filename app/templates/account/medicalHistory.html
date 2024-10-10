@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %} <link rel="stylesheet" type="text/css" href="{% static 'style/account.css' %}" /> {% endblock %}
+
+{% block title %} Antécédents médicaux {% endblock %}
+
+
+
+{% block content %}
+<div class="medic_hist">
+    <h1>Antécédents médicaux</h1>
+    <img src="{% static 'assets/account/using_computer.svg' %}"
+        alt="Image représentant un utilisateur utilisant un ordinateur">
+    <h5>Aucun antécédents enregistrée</h5>
+    <p>Appuyer sur le bouton + pour en ajouté</p>
+
+
+</div>
+
+<div class="add_medic_hist">
+    <button> <strong>+ </strong></button>
+</div>
+
+{% include "components/navbar.html" %}
+
+{% endblock %}

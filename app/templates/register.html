@@ -6,6 +6,40 @@
 
 
 {% block content %}
+<div class="text-center">
+    <h3>Bienvenue chez CircleCare</h3>
+    <h1>Inscription</h1>
 
+    <img src="{% static 'assets/Logo_2_nobackground.png' %}" alt="Logo de Circle Care">
+
+    <!-- <form> -->
+    <div class="connexion_form">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Nom Complet</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" describedby="passwordHelp"
+                placeholder="Password" autocomplete="off">
+            <label for="floatingPassword">Mot de passe</label>
+        </div>
+        <div id="passwordHelp" class="form-text text-end">Mot de passe oublié ?</div>
+
+        <button class="btn_full">
+            <a href="{% url 'tutoStepOne' %}">Connexion</a>
+        </button>
+
+        <div class="d-flex flex-row">
+            <p>Déjà un compte ?</p>
+            <a href="{% url 'register' %}"> Connexion</a>
+        </div>
+
+    </div>
+    <!-- </form> -->
+</div>
 
 {% endblock %}

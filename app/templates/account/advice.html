@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %} <link rel="stylesheet" type="text/css" href="{% static 'style/account.css' %}" /> {% endblock %}
+
+{% block title %} {% endblock %}
+
+
+
+{% block content %}
+<div>
+    <h1>Conseils</h1>
+    <ol>
+        <li>Boire suffisamment d'eau </li>
+        <li>Manger équilibré</li>
+        <li>Faire de l'exercice régulièrement :</li>
+        <li>Dormir suffisamment</li>
+        <li>Gérer le stress</li>
+        <li>Limiter la consommation d'alcool et éviter le tabac</li>
+    </ol>
+</div>
+
+{% include "components/navbar.html" %}
+
+{% endblock %}
