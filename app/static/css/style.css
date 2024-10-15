@@ -1,0 +1,97 @@
+/* [theme="light"] {
+    --primary: #E86358;
+    --secondary: #E59389;
+    --third: #fd8776;
+    --fourth: #f3c4bc;
+    --fifth: #fef3ef;
+    --sixth: #82799D;
+    --seventh: #EDECF4;
+} */
+
+@import url('theme.css');
+
+@import url('query.css');
+
+
+body {
+    height: 100vh;
+}
+
+body div:first-child {
+/* body div { */
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
+    width: 90vh !important; /* test a 90vh*/
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* Style pour les zone de texte */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--primary) !important;
+}
+
+p, em {
+    color: var(--sixth) !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: var(--primary) !important;
+}
+
+
+/* Style pour un effet bouton sur les balise a  */
+button, .button_link {
+    width: 90% !important;
+    border: 1px solid var(--primary);
+    border-radius: 8px !important;
+    margin: 15px auto !important;
+    height: 35px !important;
+}
+.full {
+    background-color: var(--primary) !important;
+    color: #ffffff !important;
+}
+
+
+form {
+    width: 100% !important;
+}
+
+
+
+/* Style pour la navbar */
+.navbar {
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+    position: sticky;
+    bottom: 0px;
+}
+
+.inline_block {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+
+    background-color: var(--seventh);
+    border: 1px solid var(--seventh);
+    border-radius: 12px;
+    margin: 20px auto;
+}
+
+/* .homeBlock {
+
+} */

@@ -1,15 +1,6 @@
-[theme="light"] {
-    --primary: #E86358;
-    --secondary: #E59389;
-    --third: #fd8776;
-    --fourth: #f3c4bc;
-    --fifth: #fef3ef;
-    --sixth: #82799D;
-    --seventh: #EDECF4;
-}
 
 /* CSS Global */
-.content_body {
+/* .content_body {
     margin-top: 25px !important;
 }
 
@@ -52,17 +43,6 @@ button {
     max-width: 30%;
 }
 
-.btn_full,
-.btn_full a {
-    background-color: var(--primary) !important;
-    color: #ffffff !important;
-}
-
-.btn_empty,
-.btn_empty a {
-    background-color: none !important;
-    color: var(--primary) !important;
-}
 
 .welcome {
     display: flex !important;
@@ -80,8 +60,8 @@ button {
 
 .connexion_form div {
     width: 50% !important;
-    /* display: inline-flex;
-    justify-content: center; */
+    display: inline-flex;
+    justify-content: center;
 }
 
 .change_log_method {
@@ -96,4 +76,12 @@ button {
     width: 25% !important;
     margin: 10px;
 
-}
+} */
+
+/*  */
+
+
+
+/* .connexion_form div{
+    height: 10px !important;
+} */

@@ -42,37 +42,54 @@ class HealthMeasurementsForm(forms.ModelForm):
             'measurement_date': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
         }
 
+
+# Formulaire de connexion
 class LoginForm(forms.Form):
-    email = forms.EmailField(widget=forms.EmailInput(attrs={
-        'class': 'form-control',
+    email = forms.EmailField(
+        min_length ="8", # A changer une fois la bdd en place
+        max_length= "20", # A changer une fois la bdd en place
+        widget=forms.EmailInput(attrs={
+        'class': 'form-control form-control-sm',
         'placeholder': 'name@example.com',
-        'id': 'floatingInput'
+        'id': 'floatingEmailInput',
+        'onchange': "checkValidInput(id, value)",
     }))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={
-        'class': 'form-control',
+    password = forms.CharField(
+        min_length ="4", # A changer une fois la bdd en place
+        max_length= "20", # A changer une fois la bdd en place
+        widget=forms.PasswordInput(attrs={
+        'class': 'form-control form-control-sm',
         'placeholder': 'Password',
         'id': 'floatingPassword',
+        'onchange':"checkValidInput(id, value)",
         'autocomplete': 'off'
     }))
 
+
+
+# Formulaire d'inscription
 class RegisterForm(forms.Form):
     full_name = forms.CharField(
-        label="Nom",
+        # label="Nom",
         max_length=100,
         widget=forms.TextInput(attrs={
-            'class': 'form-control',
-            'id': 'floatingInput',
-            'placeholder': 'Nom'
+            'class': 'form-control form-control-sm',
+            'id': 'floatingNameInput',
+            'placeholder': 'Nom',
+            'onchange': "checkValidInput(id, value)",
+            # 'autocomplete': 'name'
         })
     )
     email = forms.EmailField(widget=forms.EmailInput(attrs={
-        'class': 'form-control',
+        'class': 'form-control form-control-sm',
         'placeholder': 'name@example.com',
-        'id': 'floatingInput'
+        'id': 'floatingEmailInput',
+        'onchange': "checkValidInput(id, value)",
     }))
     password = forms.CharField(widget=forms.PasswordInput(attrs={
-        'class': 'form-control',
+        'class': 'form-control form-control-sm',
         'placeholder': 'Password',
         'id': 'floatingPassword',
-        'autocomplete': 'off'
+        'autocomplete': 'off',
+        'onchange': "checkValidInput(id, value)",
     }))

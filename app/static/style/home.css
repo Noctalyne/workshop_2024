@@ -2,8 +2,8 @@
 
 /* Page HOME */
 
-.home_header {
-    /* margin-top: 25px; */
+/* .home_header {
+    margin-top: 25px;
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-evenly !important;
@@ -38,4 +38,7 @@
     width: 45%;
     align-self: center;
     text-align: center;
-}
+} */
+
+
+

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Connexion {% endblock %}
+
+{% block content %}
+<h3>Content de te revoir</h3>
+<h1>Connexion</h1>
+
+<img src="{% static 'assets/logo_no_bg.svg' %}" alt="Logo de Circle Care">
+
+<form class="connexion_form" method="post">
+    {% csrf_token %}
+    <div class="form-floating mb-3">
+        {{ form.email }}
+        <label for="floatingEmailInput" class="form-label form-label-sm">Adresse e-mail</label>
+        <span id="floatingEmailInputHelp" class="inputHelp"></span>
+    </div>
+
+    <div class="form-floating ">
+        {{ form.password }}
+        <label for="floatingPassword" class="form-label form-label-sm">Mot de passe</label>
+        <span id="floatingPasswordHelp" class="inputHelp"></span>
+    </div>
+
+    <div id="passwordHelp" class="form-text text-end">
+        <a href="{% url 'landing' %}"> <em>Mot de passe oublié ?</em></a>
+    </div>
+
+    <button type="submit" class="full">Connexion</button>
+</form>
+
+<p> Pas de compte ? <a href="{% url 'register' %}"> Inscription</a></p>
+
+
+{% endblock %}

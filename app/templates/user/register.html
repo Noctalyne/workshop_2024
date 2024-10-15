@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Inscritpion {% endblock %}
+
+{% block content %}
+
+<h3>Bienvenue chez CircleCare</h3>
+<h1>Inscription</h1>
+
+<img src="{% static 'assets/logo_no_bg.svg' %}" alt="Logo de Circle Care">
+
+<form class="connexion_form" method="post">
+    {% csrf_token %}
+    <div class="form-floating mb-3">
+        {{ form.full_name }}
+        <label for="floatingNameInput" class="form-label form-label-sm">Nom</label>
+        <span id="floatingNameInputHelp" class="inputHelp"></span>
+    </div>
+    <div class="form-floating mb-3">
+        {{ form.email }}
+        <label for="floatingEmailInput" class="form-label form-label-sm">Adresse e-mail</label>
+        <span id="floatingEmailInputHelp" class="inputHelp"></span>
+    </div>
+    <div class="form-floating">
+        {{ form.password }}
+        <label for="floatingPassword" class="form-label form-label-sm">Adresse e-mail</label>
+        <span id="floatingPasswordHelp" class="inputHelp"></span>
+    </div>
+
+    <button type="submit" class="button_link full">S'inscrire</button>
+</form>
+
+<p>Déjà un compte ? <a href="{% url 'connect' %}"> Connexion</a> </p>
+
+
+
+{% endblock %}

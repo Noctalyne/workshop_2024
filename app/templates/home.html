@@ -11,54 +11,51 @@
 
 {% block content %}
 
-<div class="">
+{# {% include "components/homeHeader.html" %} #}
 
-    <div class="home_header">
-        <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
+<div class="inline_block">
+    <i class="em em-wave" aria-role="presentation" aria-label="WAVING HAND SIGN"></i>
 
-        <!-- TODO: Changer avec données bdd -->
-        <h4>Bonjour Gertrude</h4>
-        <img class="account_avatar" src="{% static 'assets/account/account_avatar.svg' %}" alt="">
-    </div>
-
-    <div class="home_block">
-        <a href="{% url 'vitalSigns' %}">
-            <div>
-                <h5>Signes vitaux</h5>
-                <img class="" src="{% static 'assets/home/Illustration.svg' %}" alt="">
-            </div>
-        </a>
-
-        <a href="{% url 'medicalHistory' %}">
-            <div>
-                <h5>Antécédents médicaux</h5>
-                <img class="" src="{% static 'assets/home/Illustration-1.svg' %}" alt="">
-            </div>
-        </a>
-
-        <a href="{% url 'laboratoryResult' %}">
-            <div>
-                <h5>Résultat laboratoire</h5>
-                <img class="" src="{% static 'assets/home/Illustration-2.svg' %}" alt="">
-            </div>
-        </a>
-
-        <a href="{% url 'advice' %}">
-            <div>
-                <h5>Conseil en direct</h5>
-                <img class="" src="{% static 'assets/home/Illustration-3.svg' %}" alt="">
-            </div>
-        </a>
-
-        <a href="{% url 'findWatch' %}">
-            <div>
-                <h5>Retrouver votre bracelet connecté</h5>
-                <img class="" src="{% static 'assets/home/Illustration-4.svg' %}" alt="">
-            </div>
-        </a>
-    </div>
-
+    <!-- TODO: Changer avec données bdd -->
+    <h4>Bonjour Gertrude</h4>
+    <img class="account_avatar" src="{% static 'assets/account/account_avatar.svg' %}" alt="">
 </div>
+
+<a href="{% url 'vitalSigns' %}">
+    <div class="inline_block">
+        <h5>Signes vitaux</h5>
+        <img class="" src="{% static 'assets/home/Illustration.svg' %}" alt="">
+    </div>
+</a>
+
+<a href="{% url 'medicalHistory' %}">
+    <div class="inline_block">
+        <h5>Antécédents médicaux</h5>
+        <img class="" src="{% static 'assets/home/Illustration-1.svg' %}" alt="">
+    </div>
+</a>
+
+<a href="{% url 'laboratoryResult' %}">
+    <div class="inline_block">
+        <h5>Résultat laboratoire</h5>
+        <img class="" src="{% static 'assets/home/Illustration-2.svg' %}" alt="">
+    </div>
+</a>
+
+<a href="{% url 'advice' %}">
+    <div class="inline_block">
+        <h5>Conseil en direct</h5>
+        <img class="" src="{% static 'assets/home/Illustration-3.svg' %}" alt="">
+    </div>
+</a>
+
+<a href="{% url 'findWatch' %}">
+    <div class="inline_block">
+        <h5>Retrouver votre bracelet connecté</h5>
+        <img class="" src="{% static 'assets/home/Illustration-4.svg' %}" alt="">
+    </div>
+</a>
+
 
 {% include "components/navbar.html" %}
 

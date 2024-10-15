@@ -9,20 +9,17 @@
 
 
 {% block content %}
+<img src="{% static 'assets/tutorial/using_computer.svg' %}" alt="">
 
-<div class="tuto_step">
+<h1>Suivi précis de vos signes vitaux</h1>
+<p>Avec CircleCare, restez informé en continu de vos paramètres vitaux.</p>
+<p>Nos capteurs intelligents vous alertent dès qu’un changement est détecté.</p>
 
-    <img src="{% static 'assets/tutorial/using_computer.svg' %}" alt="">
-
-    <h1>Suivi précis de vos signes vitaux</h1>
-    <p>Avec CircleCare, restez informé en continu de vos paramètres vitaux.</p>
-    <p>Nos capteurs intelligents vous alertent dès qu’un changement est détecté.</p>
-
-    <div class="tuto_step_footer">
-        <a href="{% url 'home' %}">
-            <p>Passer le tutoriel</p>
-        </a>
-        <a href="{% url 'tutoStepTwo' %}">Suivant</a>
-    </div>
+<div>
+    <a href="{% url 'home' %}">
+        <p>Passer le tutoriel</p>
+    </a>
+    <a href="{% url 'tutoStepTwo' %}">Suivant</a>
 </div>
+
 {% endblock %}

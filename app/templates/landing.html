@@ -1,22 +1,22 @@
+<!-- Template équivalent page index -->
+
 {% extends 'base.html' %}
 {% load static %}
 
+<!-- TODO: Voir pour changer le titre -->
 {% block title %} Inscritpion/Connexion {% endblock %}
 
 {% block content %}
-<div class="welcome text-center">
+<div class="">
     <h3>Bienvenue</h3>
     <h1>CircleCare</h1>
-    <img src="{% static 'assets/Logo_2_nobackground.png' %}" alt="Logo de Circle Care">
+    <img src="{% static 'assets/logo_no_bg.svg' %}" alt="Logo de Circle Care">
 
-    <!-- TODO: changer car renvoie sur un page success dans tous les cas  -->
-    <button class="btn_full">
-        <a href="{% url 'register' %}">Inscription</a>
-    </button>
-    
-    <button class="btn_empty">
-        <a href="{% url 'connect' %}">Connexion</a>
-    </button>
+    <!-- Redirige vers la page d'inscription -->
+    <a class="button_link full" href="{% url 'register' %}">Inscription</a>
+
+    <!-- Redirige vers la page de connexion -->
+    <a class="button_link" href="{% url 'connect' %}">Connexion</a>
 
 </div>
 {% endblock %}

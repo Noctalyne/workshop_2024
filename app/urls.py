@@ -6,10 +6,13 @@ urlpatterns = [
 
     path('login/', views.authentification, name='connect'),
     path('register/', views.register, name='register'),
+    
     path('home/', views.home, name='home' ),
+
     path('home/tuto/1/', views.tutoStepOne, name='tutoStepOne'),
     path('home/tuto/2/', views.tutoStepTwo, name='tutoStepTwo'),
     path('home/tuto/3/', views.tutoStepThree, name='tutoStepThree'),
+
     path('home/account/vitalSigns', views.vitalSigns, name='vitalSigns' ),
     path('home/account/medical/', views.medicalHistory, name='medicalHistory'),
 
