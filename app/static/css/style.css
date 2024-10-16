@@ -15,16 +15,21 @@
 
 body {
     height: 100vh;
+    /* width: 100vh; */
 }
 
-body div:first-child {
-/* body div { */
+/* .content_body */
+/* body div:first-child { */
+.content_body {
+    /* body div { */
     text-align: center;
     margin: auto;
     display: flex;
     flex-direction: column;
-    height: 100% !important;
-    width: 90vh !important; /* test a 90vh*/
+    height: 100vh !important
+        /**/
+    ;
+    /* width: 90vh !important; test a 90vh */
     justify-content: space-evenly;
     align-items: center;
 }
@@ -39,7 +44,8 @@ h5 {
     color: var(--primary) !important;
 }
 
-p, em {
+p,
+em {
     color: var(--sixth) !important;
 }
 
@@ -50,13 +56,16 @@ a {
 
 
 /* Style pour un effet bouton sur les balise a  */
-button, .button_link {
+button,
+.button_link {
     width: 90% !important;
+    background-color: transparent;
     border: 1px solid var(--primary);
     border-radius: 8px !important;
     margin: 15px auto !important;
     height: 35px !important;
 }
+
 .full {
     background-color: var(--primary) !important;
     color: #ffffff !important;
@@ -71,7 +80,8 @@ form {
 
 /* Style pour la navbar */
 .navbar {
-    width: 100vh;
+    /* width: 100vh; */
+    width: 100%;
     background-color: #FFFFFF;
     display: flex !important;
     flex-direction: row !important;
@@ -88,9 +98,57 @@ form {
 }
 
 .home_block {
+    width: 100%;
     background-color: var(--seventh);
     border: 1px solid var(--seventh);
     border-radius: 12px;
     margin: 7px 10px;
     padding: 0px 10px;
+}
+
+.home_header {
+    width: 100%;
+    margin: 10px !important;
+    padding: 10px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+
+
+}
+
+/* btn */
+/* .add_medic_hist {
+    
+} */
+
+.medic_modal_header {
+    /* width: 100%; */
+    margin: 10px 15px !important;
+    padding: 10px;    
+    border-bottom: 1px solid var(--primary);
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+
+
+.medic_modal_header button {
+    width: 40px !important;
+    margin: 2px 10px !important;
+}
+
+/* .medic_modal_body {} */
+
+/* */
+
+.medic_modal_footer{
+    display: flex !important;
+    flex-direction: row !important;
+    margin: 15px 0px !important;
+
+}
+
+.medic_modal_footer button {
+    width: 30% !important;
 }

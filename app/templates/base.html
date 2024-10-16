@@ -22,6 +22,9 @@
     <!-- Crétion d'un block pour ajoute du style supplémentaire à chaque pages -->
     {% block style %} {% endblock %}
 
+    <!-- Logo ajouter à l'onglet -->
+    <link rel="icon" href="{% static 'assets/Logo_2_nobackground.png' %}" type="image/png">
+
     <!-- Déclaration du titre + ajout du block pour la variation de celui-ci selon les pages -->
     <title> CircleCare ~ {% block title %} {% endblock %}</title>
 

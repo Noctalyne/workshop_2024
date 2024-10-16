@@ -1,34 +1,14 @@
 /* Pour les téléphones avec une largeur d'écran maximum de 600px */
-@media(max-width: 360px) {
-    body {
-        width: 350px !important;
-    }
-
-    /* .inline_block {
-        max-width: 300px !important;
-    } */
-
-    /* body div:first-child {
-        width: 350px !important;
-    } */
-
-}
+@media only screen and (max-width: 500px) {}
 
 
 /* Pour les appareils avec une largeur d'écran entre 601px et 1024px */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    /* body {
-        height: 100vh;
-        width: ;
-    } */
-}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {}
 
 /* Pour les écrans avec une largeur minimum de 1025px */
 @media only screen and (min-width: 1025px) {
-    /* body {
-        height: 100vh;
-    } */
-     img {
+
+    img {
         max-width: 40vh !important;
-     }
+    }
 }

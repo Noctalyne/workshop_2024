@@ -9,11 +9,10 @@ from django.contrib.auth.models import User as AuthUser
 import datetime
 
 # Create your views here.
+
+# 
 def landing(request):
     return render(request, 'landing.html')
-
-def home(request):
-    return render(request, 'home.html')
 
 def authentification(request):
     # user = User.objects.create_user("user", "user@user.fr", "userPassword1234")
@@ -32,7 +31,7 @@ def authentification(request):
             if user is not None:
                 # Authentification réussie, connexion de l'utilisateur
                 login(request, user)
-                return redirect('tutoStepOne')  # Redirection après connexion réussie
+                return redirect('home')  # Redirection après connexion réussie
             else:
                 # Authentification échouée, affichage d'un message d'erreur
                 messages.error(request, 'Email ou mot de passe incorrect.')
@@ -60,6 +59,7 @@ def register(request):
 
     return render(request, 'user/register.html', {'form': form})
 
+#  
 def tutoStepOne(request):
     return render(request, 'tuto/stepOne.html')
 
@@ -69,23 +69,29 @@ def tutoStepTwo(request):
 def tutoStepThree(request):
     return render(request, 'tuto/stepThree.html')
 
+# 
+def home(request):
+    return render(request, 'home/home.html')
+
 def vitalSigns(request) :
-    return render(request, 'account/vitalSigns.html')
+    return render(request, 'home/vitalSigns.html')
 
 def medicalHistory(request) :
-    return render(request, 'account/medicalHistory.html')
+    return render(request, 'home/medicalHistory.html')
 
 def laboratoryResult(request) :
-    return render(request, 'account/laboratoryResult.html')
+    return render(request, 'home/laboratoryResult.html')
 
 def advice(request) :
-    return render(request, 'account/advice.html')
+    return render(request, 'home/advice.html')
 
 def findWatch(request) :
-    return render(request, 'account/findWatch.html')
+    return render(request, 'home/findWatch.html')
 
+# Vue à des fin de test
 def underWork(request) :
     return render(request, 'components/workInProgress.html')
+
 
 def settings(request) :
     return render(request, 'settings.html')
