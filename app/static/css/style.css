@@ -10,7 +10,7 @@
 
 @import url('theme.css');
 
-@import url('query.css');
+@import url('./query.css');
 
 
 body {
@@ -71,12 +71,12 @@ form {
 
 /* Style pour la navbar */
 .navbar {
-    width: 100%;
+    width: 100vh;
     background-color: #FFFFFF;
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-evenly !important;
-    position: sticky;
+    position: sticky !important;
     bottom: 0px;
 }
 
@@ -85,13 +85,12 @@ form {
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     justify-content: space-between !important;
+}
 
+.home_block {
     background-color: var(--seventh);
     border: 1px solid var(--seventh);
     border-radius: 12px;
-    margin: 20px auto;
+    margin: 7px 10px;
+    padding: 0px 10px;
 }
-
-/* .homeBlock {
-
-} */

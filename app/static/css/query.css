@@ -1,9 +1,17 @@
 /* Pour les téléphones avec une largeur d'écran maximum de 600px */
-@media only screen and (max-width: 600px) {
-    /* body {
-        height: 100vh;
-        width: 100vh ;
+@media(max-width: 360px) {
+    body {
+        width: 350px !important;
+    }
+
+    /* .inline_block {
+        max-width: 300px !important;
     } */
+
+    /* body div:first-child {
+        width: 350px !important;
+    } */
+
 }
 
 
