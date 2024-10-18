@@ -7,15 +7,18 @@
 {% block title %} Antécédents médicaux {% endblock %}
 
 {% block content %}
-<!-- <div class=""></div>-->
-    <h1>Antécédents médicaux</h1>
-    <img src="{% static 'assets/account/using_computer.svg' %}"
-        alt="Image représentant un utilisateur utilisant un ordinateur">
-    <h5>Aucun antécédents enregistrée</h5>
-    <p>Appuyer sur le bouton + pour en ajouté</p>
+
+<h1>Antécédents médicaux</h1>
+<img src="{% static 'assets/account/using_computer.svg' %}"
+    alt="Image représentant un utilisateur utilisant un ordinateur">
+<h5>Aucun antécédents enregistrée</h5>
+<p>Appuyer sur le bouton + pour en ajouté</p>
 
 
-    {% include "components/home/btnAddMedic.html" %}
+{% if data == False %}{% endif %}
+
+
+{% include "components/home/btnAddMedic.html" %}
 
 {% include "components/navbar.html" %}
 

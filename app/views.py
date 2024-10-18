@@ -77,7 +77,11 @@ def vitalSigns(request) :
     return render(request, 'home/vitalSigns.html')
 
 def medicalHistory(request) :
-    return render(request, 'home/medicalHistory.html')
+    # Modifier pour générer l'affichage
+    data = False,
+    return render(request, 'home/medicalHistory.html', {'data': data })
+
+
 
 def laboratoryResult(request) :
     return render(request, 'home/laboratoryResult.html')

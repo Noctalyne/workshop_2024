@@ -7,9 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fichier CSS commun
-    <link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}" />
--->
+    <!-- Fichier CSS commun -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 
     <!-- Ajout Bootstrap -->
@@ -35,18 +33,18 @@
 
         <!-- TODO: Mettre en forme l'affichage des messages -->
         {% if messages %}
-            <ul class="messages flex-center">
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
+        <ul class="messages flex-center">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
         {% endif %}
-        
+
         <!-- Block qui contient les élément de chaque pages  -->
         {% block content %}
 
         {% endblock %}
-        
+
     </div>
 
 
@@ -54,7 +52,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
     <script src="../static/script/validForm.js"></script>
 </body>
 

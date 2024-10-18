@@ -1,21 +1,23 @@
-<!-- Mettre ici les élément formulaire pour l'ajout  -->
+{% load static %}
+
 <div class="add_medic_hist">
-    <!-- Button trigger modal -->
-    <button type="button" class="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        +
+    <img class="arrow_down" src="{% static 'assets/icons/union.svg' %}" alt="">
+    <!-- Button trigger modal-->
+    <button type="button" class="btn_add" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <img class="" src="{% static 'assets/icons/button_add_icon.svg' %}" alt="">
     </button>
 
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
+        <!-- Mettre ici les élément formulaire pour l'ajout  -->
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
 
                 <!--<div class="modal-header">-->
                 <div class="medic_modal_header">
                     <h5 class="modal-title" id="staticBackdropLabel">Aouter un antécédent médicale</h5>
-                    <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
                     <button type="button" class="full" data-bs-dismiss="modal" aria-label="Close">X</button>
                 </div>
 
@@ -27,12 +29,12 @@
                 <div class="medic_modal_footer">
                     <!-- Ajouter une alerte en cas de fermeture sans enregistrement -->
                     <button type="button" class="" data-bs-dismiss="modal">Fermer</button>
-                    <button type="button" class="full">Enregistrer</button>
+                    <!-- Une fois le bouton lier au formulaire enlever le data-bs -->
+                    <button type="button" class="full" data-bs-dismiss="modal">Enregistrer</button>
                 </div>
 
             </div>
         </div>
     </div>
-
 
 </div>

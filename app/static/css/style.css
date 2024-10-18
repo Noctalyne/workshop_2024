@@ -95,6 +95,7 @@ form {
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     justify-content: space-between !important;
+    align-items: center;
 }
 
 .home_block {
@@ -117,15 +118,36 @@ form {
 
 }
 
-/* btn */
-/* .add_medic_hist {
-    
-} */
+.add_medic_hist {
+    width: 35% !important;
+    display: flex;
+    /* align-items: center; */
+    align-items: baseline;
+    justify-content: end;
+}
+
+.arrow_down {
+    padding: 0px 25px 0px 0px;
+
+    position: relative; 
+       top: -30px;
+}
+
+
+.btn_add {
+    max-width: 50px !important;
+    height: 50px !important;
+    border-radius: 30px !important;
+    margin: 0px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .medic_modal_header {
     /* width: 100%; */
     margin: 10px 15px !important;
-    padding: 10px;    
+    padding: 10px;
     border-bottom: 1px solid var(--primary);
     display: flex !important;
     flex-direction: row !important;
@@ -142,7 +164,7 @@ form {
 
 /* */
 
-.medic_modal_footer{
+.medic_modal_footer {
     display: flex !important;
     flex-direction: row !important;
     margin: 15px 0px !important;
